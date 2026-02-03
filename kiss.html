@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kiss Day 😘</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;background:black;color:#ff4b5c;height:100vh;display:flex;justify-content:center;font-family:'Segoe UI';}
+.story{max-width:430px;width:100%;padding:40px 20px;text-align:center;}
+img{width:100%;border-radius:20px;margin-top:25px;}
+.heart{position:fixed;font-size:20px;animation:float 2s forwards;pointer-events:none;}
+@keyframes float{to{transform:translateY(-120px) scale(1.6);opacity:0;}}
+</style>
+</head>
+<body>
+<div class="story">
+<h1>😘 Kiss Day</h1>
+<p>One kiss.<br>All the feelings.</p>
+<img src="images/photo7.jpg">
+</div>
+<script>
+document.addEventListener("click",e=>{
+let h=document.createElement("div");
+h.className="heart";h.innerHTML="💋";
+h.style.left=e.clientX+"px";h.style.top=e.clientY+"px";
+document.body.appendChild(h);setTimeout(()=>h.remove(),2000);
+});
+</script>
+</body>
+</html>

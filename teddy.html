@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Teddy Day 🧸 | 2 Years ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  background:linear-gradient(135deg,#ffd1dc,#ffe6eb);
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Segoe UI',sans-serif;
+  overflow:hidden;
+}
+
+.story{
+  max-width:430px;
+  width:100%;
+  padding:35px 20px;
+  text-align:center;
+  animation:fadeIn 2s ease;
+}
+
+h1{
+  font-size:2.1em;
+  margin-bottom:10px;
+}
+
+.sub{
+  font-size:1.1em;
+  opacity:0;
+  animation:show 2s forwards;
+  animation-delay:1s;
+}
+
+p{
+  font-size:1.15em;
+  line-height:1.6;
+  margin:20px 0;
+  opacity:0;
+  animation:show 2s forwards;
+}
+
+p:nth-of-type(2){animation-delay:3s;}
+p:nth-of-type(3){animation-delay:5s;}
+
+img{
+  width:100%;
+  border-radius:22px;
+  margin:25px 0;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  opacity:0;
+  animation:show 2s forwards;
+  animation-delay:2s;
+}
+
+.years{
+  font-size:1.4em;
+  margin-top:15px;
+  color:#b03060;
+  opacity:0;
+  animation:show 2s forwards;
+  animation-delay:6.5s;
+}
+
+.heart{
+  position:fixed;
+  font-size:22px;
+  animation:float 2.2s forwards;
+  pointer-events:none;
+}
+
+@keyframes float{
+  to{
+    transform:translateY(-140px) scale(1.6);
+    opacity:0;
+  }
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:scale(0.95);}
+  to{opacity:1;transform:scale(1);}
+}
+
+@keyframes show{
+  to{opacity:1;}
+}
+</style>
+</head>
+
+<body>
+<div class="story">
+
+<h1>🧸 Teddy Day</h1>
+<div class="sub">and a little more than that…</div>
+
+<img src="images/photo4.jpg">
+
+<p>
+Some days you feel like a teddy.<br>
+Soft. Safe. Comforting.
+</p>
+
+<p>
+And somehow,<br>
+you’ve been that for me<br>
+for a long time now.
+</p>
+
+<p>
+Not just today.<br>
+Not just this week.
+</p>
+
+<div class="years">
+❤️ 2 years of us ❤️
+</div>
+
+</div>
+
+<script>
+document.addEventListener("click",e=>{
+  let h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML=["🧸","❤️","🤍","💞"][Math.floor(Math.random()*4)];
+  h.style.left=e.clientX+"px";
+  h.style.top=e.clientY+"px";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),2200);
+});
+</script>
+
+</body>
+</html>

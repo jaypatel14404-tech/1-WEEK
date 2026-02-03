@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Promise Day 🤞</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;background:#0f2027;color:white;height:100vh;display:flex;justify-content:center;font-family:'Segoe UI';}
+.story{max-width:430px;width:100%;padding:40px 20px;text-align:center;position:relative;}
+img{width:100%;border-radius:20px;margin:25px 0;}
+li{list-style:none;margin:10px 0;font-size:1.2em;}
+.next{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);opacity:0;transition:1s;}
+.next a{color:white;text-decoration:none;border-bottom:1px solid white;}
+.heart{position:fixed;font-size:20px;animation:float 2s forwards;pointer-events:none;}
+@keyframes float{to{transform:translateY(-120px) scale(1.6);opacity:0;}}
+</style>
+</head>
+<body>
+<div class="story">
+<h1>🤞 Promise Day</h1>
+<ul>
+<li>To stay.</li>
+<li>To try.</li>
+<li>To love.</li>
+</ul>
+<img src="images/photo5.jpg">
+<div class="next" id="next"><a href="hug-day.html">Next day →</a></div>
+</div>
+<script>
+setTimeout(()=>next.style.opacity=1,5000);
+document.addEventListener("click",e=>{
+let h=document.createElement("div");
+h.className="heart";h.innerHTML="💞";
+h.style.left=e.clientX+"px";h.style.top=e.clientY+"px";
+document.body.appendChild(h);setTimeout(()=>h.remove(),2000);
+});
+</script>
+</body>
+</html>

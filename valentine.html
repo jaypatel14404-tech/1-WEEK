@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Valentine’s Day ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  background:linear-gradient(135deg,#000000,#1a1a1a);
+  color:white;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Segoe UI',sans-serif;
+  overflow:hidden;
+}
+
+.story{
+  max-width:430px;
+  width:100%;
+  padding:35px 20px;
+  text-align:center;
+  animation:fadeIn 2s ease;
+}
+
+h1{
+  font-size:2.3em;
+  margin-bottom:15px;
+  color:#ff4b5c;
+}
+
+p{
+  font-size:1.15em;
+  line-height:1.6;
+  opacity:0;
+  animation:showText 2s forwards;
+}
+
+p:nth-child(2){animation-delay:1s;}
+p:nth-child(3){animation-delay:3s;}
+p:nth-child(4){animation-delay:5s;}
+
+img{
+  width:70%;
+  border-radius:22px;
+  margin:30px 0;
+  box-shadow:0 0 30px rgba(255,75,92,0.4);
+}
+
+.signature{
+  margin-top:20px;
+  font-size:1.2em;
+  opacity:0;
+  animation:showText 2s forwards;
+  animation-delay:7s;
+  color:#ffb6c1;
+}
+
+.heart{
+  position:fixed;
+  font-size:22px;
+  animation:float 2.2s forwards;
+  pointer-events:none;
+}
+
+@keyframes float{
+  to{
+    transform:translateY(-140px) scale(1.6);
+    opacity:0;
+  }
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:scale(0.95);}
+  to{opacity:1;transform:scale(1);}
+}
+
+@keyframes showText{
+  to{opacity:1;}
+}
+</style>
+</head>
+
+<body>
+<div class="story">
+
+<h1>❤️ Valentine’s Day</h1>
+
+<p>You were never just a part of my life.</p>
+
+<p>You became the moment<br>I smile without trying.</p>
+
+<img src="images/photo8.jpg">
+
+<p>This week was only pages.</p>
+<p>You are the story.</p>
+
+<div class="signature">
+Forever & always 🤍
+</div>
+
+</div>
+
+<script>
+document.addEventListener("click",e=>{
+  let h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML=["❤️","💖","💘","💋"][Math.floor(Math.random()*4)];
+  h.style.left=e.clientX+"px";
+  h.style.top=e.clientY+"px";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),2200);
+});
+</script>
+
+</body>
+</html>
